@@ -1,0 +1,9 @@
+<div class="container-fluid search-container">
+    <div class="row">
+        <div class="col-md-8 text-center" style="margin: 40vh auto;">
+            <!-- Angular specific attributes need to be imported -->
+            <input [(ngModel)]="searchTitle" class="search-input m-1" />
+            <button class="btn btn-dark m-1 search-button" (click)="onClickSearch()">Search</button>
+        </div>
+    </div>
+</div>

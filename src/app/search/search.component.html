@@ -1,0 +1,27 @@
+<div class="container-fluid search-container">
+    <div class="row">
+        <div class="col-md-8 text-center" style="margin: 50px auto;">
+            <!-- Angular specific attributes need to be imported -->
+            <input [(ngModel)]="searchTitle" class="search-input m-1" />
+            <button class="btn btn-dark m-1 search-button" (click)="onClickSearch()">Search</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid movie-list-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 p-3" *ngFor="let movie of movies">
+                <div class="card">
+                    <img class="card-img-top" src="{{ movie.Poster }}" alt="Card image cap">
+                    <div class="m-2">
+                        <a [routerLink]="" (click)="onClickMovie(movie.imdbID)" class="card-link"><h6 class="card-title">{{ movie.Title}}</h6></a>
+                        <div class="row">
+                            <div class="col-6">Type: {{ movie.Type}}</div>
+                            <div class="col-6">Year: {{ movie.Year}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
